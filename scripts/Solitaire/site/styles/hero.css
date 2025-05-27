@@ -1,0 +1,173 @@
+/* Стили для главного экрана */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding-top: 80px;
+  overflow: hidden;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 150px;
+  background: linear-gradient(to top, var(--background-dark), transparent);
+  z-index: 1;
+}
+
+.hero-content {
+  max-width: 600px;
+  position: relative;
+  z-index: 2;
+}
+
+.hero-subtitle {
+  font-size: 1.2rem;
+  color: var(--accent-color);
+  margin-bottom: var(--spacing-xs);
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+.hero-title {
+  font-size: 4rem;
+  margin-bottom: var(--spacing-sm);
+  background: linear-gradient(90deg, var(--accent-color), var(--primary-color));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: gradientFlow 5s linear infinite;
+}
+
+.hero-description {
+  font-size: 1.5rem;
+  color: var(--text-medium);
+  margin-bottom: var(--spacing-md);
+  font-weight: 300;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: var(--spacing-sm);
+}
+
+.hero-illustration {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.silhouette-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.moon {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  top: 20%;
+  right: 20%;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+  box-shadow: 0 0 50px rgba(255, 255, 255, 0.6);
+  animation: pulsate 8s infinite ease-in-out;
+}
+
+@keyframes pulsate {
+  0% { transform: scale(1); box-shadow: 0 0 50px rgba(255, 255, 255, 0.6); }
+  50% { transform: scale(1.05); box-shadow: 0 0 80px rgba(255, 255, 255, 0.8); }
+  100% { transform: scale(1); box-shadow: 0 0 50px rgba(255, 255, 255, 0.6); }
+}
+
+.tree {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 120px;
+  height: 300px;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="120" height="300" viewBox="0 0 120 300"><path d="M60,300 L60,100 M30,100 L60,60 L90,100 M20,130 L60,80 L100,130 M10,170 L60,110 L110,170" stroke="black" stroke-width="10" fill="none"/></svg>');
+  background-repeat: no-repeat;
+  background-position: bottom;
+  filter: brightness(0) invert(0.2);
+}
+
+.creature {
+  position: absolute;
+  bottom: 50px;
+  left: 65%;
+  width: 50px;
+  height: 80px;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="50" height="80" viewBox="0 0 50 80"><circle cx="25" cy="20" r="15" fill="black"/><line x1="25" y1="35" x2="25" y2="60" stroke="black" stroke-width="5"/><line x1="25" y1="45" x2="10" y2="30" stroke="black" stroke-width="5"/><line x1="25" y1="45" x2="40" y2="30" stroke="black" stroke-width="5"/><line x1="25" y1="60" x2="15" y2="80" stroke="black" stroke-width="5"/><line x1="25" y1="60" x2="35" y2="80" stroke="black" stroke-width="5"/></svg>');
+  background-repeat: no-repeat;
+  filter: brightness(0) invert(0.2);
+}
+
+.landscape {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 120px;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="120" viewBox="0 0 1200 120"><path d="M0,120 L0,80 C100,60 200,90 300,70 C400,50 500,80 600,70 C700,60 800,40 900,60 C1000,80 1100,50 1200,70 L1200,120 Z" fill="black" /></svg>');
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: brightness(0) invert(0.2);
+}
+
+@media (max-width: 992px) {
+  .hero-content {
+    max-width: 100%;
+    text-align: center;
+  }
+  
+  .hero-buttons {
+    justify-content: center;
+  }
+  
+  .moon {
+    right: 10%;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 3rem;
+  }
+  
+  .hero-description {
+    font-size: 1.2rem;
+  }
+  
+  .moon {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .tree {
+    left: 40%;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-title {
+    font-size: 2.5rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+  
+  .hero-buttons {
+    flex-direction: column;
+  }
+}
