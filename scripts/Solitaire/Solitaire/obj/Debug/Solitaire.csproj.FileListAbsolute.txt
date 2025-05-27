@@ -1,0 +1,15 @@
+C:\Users\lomegai\source\repos\Solitaire\Solitaire\bin\Debug\Solitaire.exe.config
+C:\Users\lomegai\source\repos\Solitaire\Solitaire\bin\Debug\Solitaire.exe
+C:\Users\lomegai\source\repos\Solitaire\Solitaire\bin\Debug\Solitaire.pdb
+C:\Users\lomegai\source\repos\Solitaire\Solitaire\obj\Debug\Solitaire.csproj.AssemblyReference.cache
+C:\Users\lomegai\source\repos\Solitaire\Solitaire\obj\Debug\MainWindow.g.cs
+C:\Users\lomegai\source\repos\Solitaire\Solitaire\obj\Debug\App.g.cs
+C:\Users\lomegai\source\repos\Solitaire\Solitaire\obj\Debug\Solitaire_MarkupCompile.cache
+C:\Users\lomegai\source\repos\Solitaire\Solitaire\obj\Debug\MainWindow.baml
+C:\Users\lomegai\source\repos\Solitaire\Solitaire\obj\Debug\Solitaire.g.resources
+C:\Users\lomegai\source\repos\Solitaire\Solitaire\obj\Debug\Solitaire.Properties.Resources.resources
+C:\Users\lomegai\source\repos\Solitaire\Solitaire\obj\Debug\Solitaire.csproj.GenerateResource.cache
+C:\Users\lomegai\source\repos\Solitaire\Solitaire\obj\Debug\Solitaire.csproj.CoreCompileInputs.cache
+C:\Users\lomegai\source\repos\Solitaire\Solitaire\obj\Debug\Solitaire.exe
+C:\Users\lomegai\source\repos\Solitaire\Solitaire\obj\Debug\Solitaire.pdb
+C:\Users\lomegai\source\repos\Solitaire\Solitaire\obj\Debug\Solitaire.exe.config
