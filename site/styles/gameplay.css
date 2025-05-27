@@ -1,0 +1,129 @@
+/* Стили для секции Геймплей */
+.gameplay {
+  background-color: var(--background-dark);
+  position: relative;
+}
+
+.gameplay-tabs {
+  margin-top: var(--spacing-lg);
+}
+
+.tab-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: var(--spacing-md);
+  gap: 10px;
+}
+
+.tab-btn {
+  padding: var(--spacing-xs) var(--spacing-sm);
+  background-color: transparent;
+  color: var(--text-medium);
+  border: 1px solid rgba(138, 43, 226, 0.3);
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: all var(--transition-speed);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.9rem;
+}
+
+.tab-btn:hover {
+  background-color: rgba(138, 43, 226, 0.1);
+  color: var(--accent-color);
+}
+
+.tab-btn.active {
+  background-color: var(--primary-color);
+  color: var(--text-light);
+  border-color: var(--primary-color);
+}
+
+.tab-content {
+  overflow: hidden;
+}
+
+.tab-pane {
+  display: none;
+  animation: fadeIn var(--transition-speed);
+}
+
+.tab-pane.active {
+  display: block;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.gameplay-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-lg);
+  align-items: center;
+}
+
+.gameplay-text h3 {
+  font-size: 1.8rem;
+  margin-bottom: var(--spacing-sm);
+  color: var(--accent-color);
+}
+
+.gameplay-text p {
+  margin-bottom: var(--spacing-sm);
+  color: var(--text-medium);
+}
+
+.gameplay-text ul {
+  list-style-type: none;
+}
+
+.gameplay-text ul li {
+  padding-left: var(--spacing-sm);
+  position: relative;
+  margin-bottom: var(--spacing-xs);
+}
+
+.gameplay-text ul li::before {
+  content: '•';
+  color: var(--accent-color);
+  position: absolute;
+  left: 0;
+}
+
+.gameplay-image {
+  position: relative;
+}
+
+.gameplay-image img {
+  width: 100%;
+  height: auto;
+  border-radius: var(--border-radius);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 992px) {
+  .tab-buttons {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding-bottom: var(--spacing-xs);
+    justify-content: flex-start;
+  }
+  
+  .gameplay-content {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-md);
+  }
+  
+  .gameplay-image {
+    order: -1;
+  }
+}
+
+@media (max-width: 576px) {
+  .tab-btn {
+    font-size: 0.8rem;
+    padding: 8px 12px;
+  }
+}
